@@ -1,18 +1,11 @@
-import { Component } from 'react'
+import Header from '../../components/Header/Header';
 
-export default class Pay extends Component {
-
-    state = {
-        count: 0,
-    };
-
-  render() {
-    return (
-      <div>
-        <h1>{this.props.title}</h1>
-        <h2>{this.state.count}</h2>
-        <button onClick={() => {this.setState({count: this.state.count + 1})}}>Aumentar</button>    
-      </div>
-    );
-  }
+const Pay = () => {
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
+
+export default Pay;
