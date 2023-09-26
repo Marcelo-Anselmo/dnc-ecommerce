@@ -1,1 +1,32 @@
 @use "../../sass/variables" as *;
+
+.header-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 56px;
+    background-color: $header-background;
+
+
+    &__Logo {
+            width: 109px;
+            height: 56px;
+        }
+
+    ul {
+        display: flex;
+        list-style: none;
+        column-gap: 48px;
+        flex-grow: 1;
+        padding-left: 70px;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    &__cart-shop {
+        display: flex;
+        gap: 10px;
+    }
+}
+
