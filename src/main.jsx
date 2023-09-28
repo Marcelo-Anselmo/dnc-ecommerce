@@ -1,12 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
 // import App from './App.jsx'
-import './index.scss'
+import "./index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Login from './views/Login/Login';
-import Home from './views/Home/Home';
-import Products from './views/Products/Products.jsx';
-import Pay from './views/Pay/Pay.jsx';
+import Login from "./views/Login/Login";
+import Home from "./views/Home/Home";
+import Products from "./views/Products/Products.jsx";
+import Pay from "./views/Pay/Pay.jsx";
+import { PRODUCTS_MOCK } from "./mock/products.mock";
 
 const router = createBrowserRouter([
   {
@@ -15,15 +16,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/home",
-    element: <Home />,
+    element: <Home data={PRODUCTS_MOCK} />,
   },
   {
     path: "/products/:productId",
-    element: <Products />,
+    element: <Products data={PRODUCTS_MOCK} />,
   },
   {
     path: "/pay/:payId",
-    element: <Pay />,
+    element: <Pay data={PRODUCTS_MOCK} />,
   },
 ]);
 
