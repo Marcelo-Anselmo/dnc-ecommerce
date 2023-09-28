@@ -1,1 +1,16 @@
 @use '../../sass/variables' as *;
+
+.home {
+    
+
+    &__products {
+        display: flex;
+        flex-direction: row;
+        width: 1316px;
+        height: 923px;
+        flex-wrap: wrap;
+        margin: 2rem 17rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
