@@ -1,13 +1,20 @@
 import React from 'react'
 import "./index.scss";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import HeaderMenu from '../../components/HeaderMenu/HeaderMenu';
+import Search from '../../components/Search/Search';
+import ProductDetail from '../../components/ProductDetail/ProductDetail';
 
-const Products = () => {
+const Products = ({ data }) => {
+  const { productId } = useParams();
+  const selectedProduct = data.find((product) => product.id == productId);
+
   return (
-    <div>
-      <h1>Products</h1>
-      <button><Link to={``}>Pay</Link></button>
-    </div>
+    <section className="product">
+      <HeaderMenu />
+      <Search />
+      <ProductDetail data={selectedProduct} />
+    </section>
   );
 }
 
